@@ -9,7 +9,7 @@ namespace testForTimedMutex{
 
 	void increment(int i) {
 		if (mtx.try_lock_for(std::chrono::seconds(2))) {
-			++myAccount;
+			myAccount+=i;
 			std::this_thread::sleep_for(std::chrono::seconds(1));
 			std::cout << "thread : " << i << std::endl;
 			mtx.unlock();       //注意此处释放锁

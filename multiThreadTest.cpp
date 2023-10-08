@@ -16,13 +16,13 @@
 int main()
 {
     //test for timed mutex
-   /* std::thread th1(testForTimedMutex::increment, 1);
+    std::thread th1(testForTimedMutex::increment, 1);
     std::thread th2(testForTimedMutex::increment, 2);
 
     th1.join();
     th2.join();
 
-    std::cout << "myAccount : " << testForTimedMutex::myAccount << std::endl;*/
+    std::cout << "myAccount : " << testForTimedMutex::myAccount << std::endl;
 
     //test for recursive_mutex
     /*std::thread th3(testForRecursiveMutex_Recursive::recursion, '1', 5);
@@ -57,11 +57,11 @@ int main()
     th11.join();*/
 
     //test for dead lock phenomenon
-    std::thread th12(testFor_DeadLock::thread6);
+    /*std::thread th12(testFor_DeadLock::thread6);
     std::thread th13(testFor_DeadLock::thread7);
 
     th12.join();
-    th13.join();
+    th13.join();*/
 
     //test for std lock
     /*std::thread th14(testFor_std_lock::task_a);
